@@ -1,6 +1,6 @@
 <?php
 
-namespace  Repoti\Facade;
+namespace  Ripoti\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\Facade;
  * @method static void report(\Exception $exception)
  */
 
-class Repoti extends Facade
+class Ripoti extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'repoti';
+        return 'ripoti';
     }
 }

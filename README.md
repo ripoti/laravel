@@ -1,5 +1,5 @@
-## repoti/laravel
-A easy way to report Exceptions from a laravel app to various channels including Slack, Email, Sms
+## ripoti/laravel
+An easy way to report Exceptions from a laravel app to various channels including Slack, Email, Sms
 
 ## Installation
 This release is hosted on github
@@ -11,17 +11,17 @@ and add the sigma repository on the repository option.
 "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/repoti/laravel"
+            "url": "https://github.com/ripoti/laravel"
         }
     ]
 ```
 
-Add repoti/laravel on the require list in your composer.json
+Add ripoti/laravel on the require list in your composer.json
 ```json
-"repoti/laravel": "^1.0.0",
+"ripoti/laravel": "^1.0.0",
 ```
 
-Install repoti/laravel with composer require command
+Install ripoti/laravel with composer require command
 ```shell
-composer require repoti/laravel
+composer require ripoti/laravel
 ```
