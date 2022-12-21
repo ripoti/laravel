@@ -5,7 +5,7 @@ namespace  Ripoti\Facade;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @method static void report(\Exception $exception)
+ * @method static void report(\Throwable $exception)
  */
 
 class Ripoti extends Facade
