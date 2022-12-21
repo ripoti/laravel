@@ -11,7 +11,8 @@ class SlackChannel implements ChannelInterface
 
     public function report(Throwable $exception, array $config = []): void
     {
-        $time = Carbon::now()->toDateTimeString();
+        $exceptionClass = get_class($exception);
+        $time = Carbon::now()->toDayDateTimeString();
         $exceptionMessage = $exception->getMessage();
         $exceptionTrace = $exception->getTraceAsString();
         $projectName = env('APP_NAME');
@@ -23,12 +24,10 @@ class SlackChannel implements ChannelInterface
         $osVersion = php_uname('r');
 
         $message = "
-        :bangbang: *$exceptionMessage*.
-        \n
-        \nProject Name: $projectName
-        \nDate: _ $time _
-        \n
-        \nAssignees: <@U01026LFKSP>
+        :exclamation: *$exceptionClass*. on _ $projectName _
+        \n$exceptionMessage
+        \nReported at: _ $time _
+        \nReport to: <@U01026LFKSP>
          ``` Trace\n$exceptionTrace\n\nTags\n• OS : $os \n• OS Version : $osVersion \n• Server Name : $serverName \n• PHP Runtime : $phpVersion \n• Path => $root \n• IP : $ip \n ```
         ";
 
