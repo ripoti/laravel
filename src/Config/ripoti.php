@@ -2,7 +2,7 @@
 
 return [
 
-    'default' => env('REPOTI_CHANNEL', 'slack'),
+    'default' => env('RIPOTI_CHANNEL', 'slack'),
 
     "channels" => [
         "slack" => [

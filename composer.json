@@ -1,5 +1,5 @@
 {
-    "name": "repoti/laravel",
+    "name": "ripoti/laravel",
     "description": "An easy way to report Exceptions from a laravel app to channels including Slack, Email and Sms",
     "type": "library",
     "authors": [
@@ -16,13 +16,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Repoti\\": "src/"
+            "Ripoti\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Repoti\\Providers\\BugClasperServiceProvider"
+                "Ripoti\\Providers\\RipotiServiceProvider"
             ]
         }
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Repoti\Notifications;
+namespace Ripoti\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

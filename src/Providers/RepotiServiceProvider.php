@@ -1,11 +1,11 @@
 <?php
 
-namespace Repoti\Providers;
+namespace Ripoti\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Repoti\Repoti;
+use Ripoti\Ripoti;
 
-class RepotiServiceProvider extends ServiceProvider
+class RipotiServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -13,8 +13,8 @@ class RepotiServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->bind('repoti', function (){
-            return new Repoti();
+        $this->app->bind('ripoti', function (){
+            return new Ripoti();
         });
     }
 
@@ -25,6 +25,6 @@ class RepotiServiceProvider extends ServiceProvider
     public function boot(): void
     {
 
-        $this->publishes([__DIR__ . '/../Config/repoti.php' => config_path('repoti.php'),], 'config');
+        $this->publishes([__DIR__ . '/../Config/ripoti.php' => config_path('ripoti.php'),], 'config');
     }
 }

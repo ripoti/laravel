@@ -1,16 +1,16 @@
 <?php
 
-namespace Repoti;
+namespace Ripoti;
 
 use Throwable;
 
-class Repoti
+class Ripoti
 {
     protected array $config;
 
     public function __construct()
     {
-        $this->config = config('repoti');
+        $this->config = config('ripoti');
     }
 
     public function report(Throwable $exception): void

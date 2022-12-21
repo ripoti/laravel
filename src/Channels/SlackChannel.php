@@ -1,9 +1,9 @@
 <?php
-namespace Repoti\Channels;
+namespace Ripoti\Channels;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Notification;
-use Repoti\Notifications\SlackNotice;
+use Ripoti\Notifications\SlackNotice;
 use Throwable;
 
 class SlackChannel implements ChannelInterface

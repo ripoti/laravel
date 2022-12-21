@@ -1,6 +1,6 @@
 <?php
 
-namespace Repoti\Channels;
+namespace Ripoti\Channels;
 
 use Throwable;
 

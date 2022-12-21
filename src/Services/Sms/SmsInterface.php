@@ -1,6 +1,6 @@
 <?php
 
-namespace Repoti\Services\Sms;
+namespace Ripoti\Services\Sms;
 
 interface SmsInterface
 {
