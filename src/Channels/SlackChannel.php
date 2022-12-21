@@ -11,10 +11,18 @@ class SlackChannel implements ChannelInterface
 
     public function report(Throwable $exception, array $config = []): void
     {
+        $dir = substr(__DIR__,0,-14);
+
+        $backtrace =  $exception->getTraceAsString();
+        $backtrace = str_replace([$dir],"", $backtrace);
+        $backtrace = preg_replace('^(.*vendor.*)\n^','',$backtrace);
+
+        $line = $exception->getLine();
+        $file = $exception->getFile();
         $exceptionClass = get_class($exception);
         $time = Carbon::now()->toDayDateTimeString();
         $exceptionMessage = $exception->getMessage();
-        $exceptionTrace = $exception->getTraceAsString();
+
         $projectName = env('APP_NAME');
         $phpVersion = phpversion();
         $serverName = php_uname('n');
@@ -24,10 +32,13 @@ class SlackChannel implements ChannelInterface
         $osVersion = php_uname('r');
 
         $message = "
-        :exclamation: *$exceptionClass*. on _ $projectName _
-        \n$exceptionMessage
-        \nReported at: _ $time _
-         ``` Trace\n$exceptionTrace\n\nTags\n• OS : $os \n• OS Version : $osVersion \n• Server Name : $serverName \n• PHP Runtime : $phpVersion \n• Path => $root \n• IP : $ip \n ```
+        :red_circle: *$exceptionClass on $projectName*  :exclamation:
+        \n:black_small_square: $exceptionMessage
+
+         ```
+         \nFile: $file \nLine: $line\nTrace: $backtrace\n\nTags\n• OS : $os \n• OS Version : $osVersion \n• Server Name : $serverName \n• PHP Runtime : $phpVersion \n• Path => $root \n• IP : $ip \n
+         ```
+         \n`Reported at: $time`
         ";
 
         Notification::route('slack', $config['webHookUrl'])
