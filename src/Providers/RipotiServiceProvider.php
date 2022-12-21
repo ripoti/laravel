@@ -16,6 +16,10 @@ class RipotiServiceProvider extends ServiceProvider
         $this->app->bind('ripoti', function (){
             return new Ripoti();
         });
+
+        $this->mergeConfigFrom(
+            __DIR__ . '/../Config/ripoti.php', 'ripoti'
+        );
     }
 
     /**
