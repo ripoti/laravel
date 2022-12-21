@@ -1,6 +1,6 @@
 <?php
 
-namespace Kinatech\BugClasper\Channels;
+namespace Repoti\Channels;
 
 use Throwable;
 

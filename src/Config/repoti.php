@@ -2,7 +2,7 @@
 
 return [
 
-    'default' => env('BUG_CLASPER_CHANNEL', 'slack'),
+    'default' => env('REPOTI_CHANNEL', 'slack'),
 
     "channels" => [
         "slack" => [

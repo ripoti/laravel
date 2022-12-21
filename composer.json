@@ -1,10 +1,10 @@
 {
-    "name": "kinatechsolutions/bug-clasper",
+    "name": "repoti/laravel",
     "description": "An easy way to report Exceptions from a laravel app to channels including Slack, Email and Sms",
     "type": "library",
     "authors": [
         {
-            "name": "Kinare",
+            "name": "Michael Kamau",
             "email": "michaelkinare@gmail.com"
         }
     ],
@@ -16,13 +16,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Kinatech\\BugClasper\\": "src/"
+            "Repoti\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Kinatech\\BugClasper\\Providers\\BugClasperServiceProvider"
+                "Repoti\\Providers\\BugClasperServiceProvider"
             ]
         }
     }

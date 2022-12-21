@@ -1,9 +1,9 @@
 <?php
-namespace Kinatech\BugClasper\Channels;
+namespace Repoti\Channels;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Notification;
-use Kinatech\BugClasper\Notifications\SlackNotice;
+use Repoti\Notifications\SlackNotice;
 use Throwable;
 
 class SlackChannel implements ChannelInterface

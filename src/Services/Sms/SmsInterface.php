@@ -1,6 +1,6 @@
 <?php
 
-namespace Kinatech\BugClasper\Services\Sms;
+namespace Repoti\Services\Sms;
 
 interface SmsInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kinatech\BugClasper\Notifications;
+namespace Repoti\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

@@ -1,6 +1,6 @@
 <?php
 
-namespace  Kinatech\BugClasper\Facade;
+namespace  Repoti\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\Facade;
  * @method static void report(\Exception $exception)
  */
 
-class BugClasper extends Facade
+class Repoti extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'bugClasper';
+        return 'repoti';
     }
 }
